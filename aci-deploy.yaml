@@ -1,0 +1,36 @@
+apiVersion: 2023-05-01
+location: eastus
+name: spring-aop-container
+type: Microsoft.ContainerInstance/containerGroups
+properties:
+  containers:
+    - name: springboot-app
+      properties:
+        image: acrkizhaku.azurecr.io/spring-aop-app:v2
+        resources:
+          requests:
+            cpu: 1
+            memoryInGb: 1.5
+        volumeMounts:
+          - name: logvolume
+            mountPath: /app/logs
+        ports:
+          - port: 80
+  osType: Linux
+  restartPolicy: Always
+  ipAddress:
+    type: Public
+    ports:
+      - protocol: tcp
+        port: 80
+  volumes:
+    - name: logvolume
+      azureFile:
+        shareName: springaop-logs
+        storageAccountName: storespringaop
+        storageAccountKey: <<Add key here>>
+
+  imageRegistryCredentials:
+    - server: acrkizhaku.azurecr.io
+      username: acrkizhaku
+      password: <<Add credentials here>>

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "containerGroupName": {
+      "value": "spring-aop-container"
+    },
+    "location": {
+      "value": "eastus"
+    },
+    "containerName": {
+      "value": "springboot-app"
+    },
+    "imageName": {
+      "value": "acrkizhaku.azurecr.io/spring-aop-app:v2"
+    },
+    "port": {
+      "value": "80"
+    },
+    "mountPath": {
+      "value": "/app/logs"
+    },
+    "dnsLabel": {
+      "value": "kizhakuspringaopdemo"
+    },
+    "storageAccountName": {
+      "value": "storespringaop"
+    },
+    "storageAccountKey": {
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/9b994d9a-e02b-4318-b101-53278a4c5802/resourceGroups/grp-springaop/providers/Microsoft.KeyVault/vaults/keyvault-app-springaop"
+        },
+        "secretName": "storageAccountKey"
+      }
+    },
+    "containerRegistryName": {
+      "value": "acrkizhaku.azurecr.io"
+    },
+    "acrUserName": {
+      "value": "acrkizhaku"
+    },
+    "acrPassword": {
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/9b994d9a-e02b-4318-b101-53278a4c5802/resourceGroups/grp-springaop/providers/Microsoft.KeyVault/vaults/keyvault-app-springaop"
+        },
+        "secretName": "acrPassword"
+      }
+    },
+    "fileShareName": {
+      "value": "springaop-logs"
+    }
+  }
+}
