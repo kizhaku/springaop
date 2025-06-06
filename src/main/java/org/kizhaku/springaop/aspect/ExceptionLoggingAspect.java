@@ -19,8 +19,8 @@ public class ExceptionLoggingAspect {
     //@Autowired
     //Environment env;
 
-    @Value("${appSecret}")
-    private String appSecret;
+    //@Value("${appSecret}")
+    //private String appSecret;
 
     Logger logger = LoggerFactory.getLogger(ExceptionLoggingAspect.class);
 
@@ -39,13 +39,23 @@ public class ExceptionLoggingAspect {
 //        }
 //    }
 
-    @AfterThrowing(pointcut = "execution(* org.kizhaku.springaop..*(..))", throwing = "ex")
+    //This is with using azure keyvault secret
+   /* @AfterThrowing(pointcut = "execution(* org.kizhaku.springaop..*(..))", throwing = "ex")
     public void logExceptions(JoinPoint joinPoint, Throwable ex) {
         logger.error("Exception in {} with args {} with Dsec {}: {}",
                 joinPoint.getSignature(),
                 Arrays.toString(joinPoint.getArgs()),
                 //env.getProperty("appSecret"),
                 appSecret,
+                ex.getMessage(), ex);
+    }
+*/
+    //This is without using azure keyvault secret
+    @AfterThrowing(pointcut = "execution(* org.kizhaku.springaop..*(..))", throwing = "ex")
+    public void logExceptions(JoinPoint joinPoint, Throwable ex) {
+        logger.error("Exception in {} with args {}: {}",
+                joinPoint.getSignature(),
+                Arrays.toString(joinPoint.getArgs()),
                 ex.getMessage(), ex);
     }
 }

@@ -1,22 +1,2 @@
-2025-05-05 16:06:57 - Starting SpringAopApplication using Java 23.0.2 with PID 953 (/Users/arunk/Documents/Git/SpringAop/target/classes started by arunk in /Users/arunk/Documents/Git/SpringAop)
-2025-05-05 16:06:57 - The following 1 profile is active: "local"
-2025-05-05 16:06:58 - Tomcat initialized with port 8080 (http)
-2025-05-05 16:06:58 - Starting service [Tomcat]
-2025-05-05 16:06:58 - Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-05-05 16:06:58 - Initializing Spring embedded WebApplicationContext
-2025-05-05 16:06:58 - Root WebApplicationContext: initialization completed in 519 ms
-2025-05-05 16:06:58 - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-05-05 16:06:58 - Tomcat started on port 8080 (http) with context path '/'
-2025-05-05 16:06:58 - Started SpringAopApplication in 6.291 seconds (process running for 6.595)
-2025-05-05 16:07:54 - Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-05 16:07:54 - Graceful shutdown complete
-2025-05-05 16:08:05 - Starting SpringAopApplication using Java 23.0.2 with PID 962 (/Users/arunk/Documents/Git/SpringAop/target/classes started by arunk in /Users/arunk/Documents/Git/SpringAop)
-2025-05-05 16:08:05 - The following 1 profile is active: "local"
-2025-05-05 16:08:06 - Tomcat initialized with port 8080 (http)
-2025-05-05 16:08:06 - Starting service [Tomcat]
-2025-05-05 16:08:06 - Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-05-05 16:08:06 - Initializing Spring embedded WebApplicationContext
-2025-05-05 16:08:06 - Root WebApplicationContext: initialization completed in 506 ms
-2025-05-05 16:08:06 - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-05-05 16:08:06 - Tomcat started on port 8080 (http) with context path '/'
-2025-05-05 16:08:06 - Started SpringAopApplication in 5.352 seconds (process running for 5.65)
+2025-05-21 13:09:25 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-21 13:09:25 - Graceful shutdown complete
