@@ -19,4 +19,11 @@ public class ExceptionResponseHandler {
                 .status(HttpStatus.NOT_FOUND)
                 .body(new UserErrorResponse("Missing user in system", ex.getMessage(), ex.getUserId()));
     }
+
+    @ExceptionHandler(Exception.class) //Default global exception
+    public ResponseEntity<ErrorResponse> handleDefaultError(Exception ex) {
+        return ResponseEntity
+                .status(HttpStatus.INTERNAL_SERVER_ERROR)
+                .body(new ErrorResponse("An error has occured in server", "This is an uncaught exception"));
+    }
 }
