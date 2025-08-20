@@ -1,4 +1,4 @@
-# SpringAop Observability Demo
+# SpringAop Observability Standalone setup
 
 ## About the app
 
